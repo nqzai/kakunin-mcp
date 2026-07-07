@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.nqzai/kakunin",
+  "description": "X.509 identity, risk scoring, and audit logging for AI agents. MiCA + EU AI Act compliant.",
+  "repository": {
+    "url": "https://github.com/nqzai/kakunin-mcp",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@kakunin/mcp",
+      "version": "0.2.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "KAKUNIN_API_KEY",
+          "description": "Kakunin API key (kak_live_... or kak_test_...). Obtain at https://kakunin.ai/dashboard.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "KAKUNIN_AGENT_ID",
+          "description": "ID of the agent this MCP server acts on behalf of (agt_...).",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

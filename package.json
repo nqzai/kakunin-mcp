@@ -1,0 +1,66 @@
+{
+  "name": "@kakunin/mcp",
+  "version": "0.2.0",
+  "description": "Kakunin MCP server \u2014 lets AI agents query their own scope, risk score, and log behavioral events",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "kakunin-mcp": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "dev": "node --env-file=.env dist/index.js",
+    "prepublishOnly": "npm run build && npm run typecheck"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "kyc",
+    "kakunin",
+    "compliance"
+  ],
+  "license": "MIT",
+  "homepage": "https://kakunin.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nqzai/kakunin-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nqzai/kakunin-mcp/issues"
+  }
+}
