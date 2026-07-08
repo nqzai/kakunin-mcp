@@ -36,7 +36,7 @@ export const auditLogAppendInputSchema = z.object({
         '"api_call" for standard API calls.',
     ),
   metadata: z
-    .record(z.unknown())
+    .record(z.string(), z.unknown())
     .describe(
       'Arbitrary key-value pairs describing the event. ' +
         'For transactions: include amount, currency, venue. ' +
