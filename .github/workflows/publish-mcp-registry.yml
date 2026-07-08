@@ -4,9 +4,10 @@
 # this only registers/updates the server listing.
 name: Publish to MCP Registry
 
+# Manual re-publish only. The tag-triggered path lives in publish.yml, which
+# publishes npm first (the registry validates the published package), then the
+# registry — avoiding a race between two workflows on the same tag.
 on:
-  push:
-    tags: ['v*']
   workflow_dispatch:
 
 permissions:
