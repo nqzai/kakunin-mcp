@@ -41,20 +41,28 @@ const apiKey = process.env['KAKUNIN_API_KEY'];
 const agentId = process.env['KAKUNIN_AGENT_ID'];
 const baseUrl = process.env['KAKUNIN_BASE_URL'];
 
-if (!apiKey) {
-  console.error('[kakunin-mcp] KAKUNIN_API_KEY is required');
-  process.exit(1);
+// Lazy client. The server registers and lists its tools WITHOUT any
+// credentials, so registries and introspection tools can start it and read
+// its tool list. Credentials are only required when a tool is actually called.
+let _client: KakuninMcpClient | undefined;
+function getClient(): KakuninMcpClient {
+  if (!apiKey) {
+    throw new Error(
+      'KAKUNIN_API_KEY is required to call Kakunin tools. Set it in your MCP server environment.',
+    );
+  }
+  if (!agentId) {
+    throw new Error(
+      'KAKUNIN_AGENT_ID is required to call Kakunin tools. Set it in your MCP server environment.',
+    );
+  }
+  _client ??= new KakuninMcpClient({
+    apiKey,
+    agentId,
+    ...(baseUrl !== undefined ? { baseUrl } : {}),
+  });
+  return _client;
 }
-if (!agentId) {
-  console.error('[kakunin-mcp] KAKUNIN_AGENT_ID is required');
-  process.exit(1);
-}
-
-const client = new KakuninMcpClient({
-  apiKey,
-  agentId,
-  ...(baseUrl !== undefined ? { baseUrl } : {}),
-});
 
 // ── MCP Server ────────────────────────────────────────────────────────────────
 
@@ -71,7 +79,7 @@ server.tool(
     'Call this BEFORE executing any action that might exceed scope — not after.',
   verifyScopeInputSchema.shape,
   async (input) => {
-    const result = await verifyScopeHandler(client, input);
+    const result = await verifyScopeHandler(getClient(), input);
     return {
       content: [
         {
@@ -92,7 +100,7 @@ server.tool(
   // No input parameters
   {},
   async () => {
-    const result = await checkRiskHandler(client);
+    const result = await checkRiskHandler(getClient());
     return {
       content: [
         {
@@ -126,7 +134,7 @@ server.tool(
         isError: true,
       };
     }
-    const result = await auditLogAppendHandler(client, parsed.data);
+    const result = await auditLogAppendHandler(getClient(), parsed.data);
     return {
       content: [
         {
