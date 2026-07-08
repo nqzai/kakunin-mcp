@@ -33,7 +33,7 @@
     "kakunin",
     "compliance"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "homepage": "https://kakunin.ai",
   "repository": {
     "type": "git",
