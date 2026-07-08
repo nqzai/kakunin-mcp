@@ -1,6 +1,6 @@
 {
   "name": "@kakunin/mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Kakunin MCP server — lets AI agents query their own scope, risk score, and log behavioral events",
   "type": "module",
   "main": "./dist/index.js",

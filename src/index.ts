@@ -68,7 +68,7 @@ function getClient(): KakuninMcpClient {
 
 const server = new McpServer({
   name: 'kakunin',
-  version: '0.2.1',
+  version: '0.2.2',
 });
 
 // Tool 1: verify_agent_scope
