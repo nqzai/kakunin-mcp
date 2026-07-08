@@ -1,5 +1,7 @@
 # @kakunin/mcp
 
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/nqzai/kakunin-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/nqzai/kakunin-mcp)
+
 Model Context Protocol server for the [Kakunin](https://kakunin.ai) AI agent compliance API. Lets AI agents self-verify scope, check their own risk score, and log behavioral events — all from within Claude, Cursor, or any MCP-compatible runtime.
 
 ```bash
