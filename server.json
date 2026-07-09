@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.nqzai/kakunin",
+  "name": "io.github.kakunin-ai/kakunin",
   "description": "X.509 identity, risk scoring, and audit logging for AI agents. MiCA + EU AI Act compliant.",
   "repository": {
     "url": "https://github.com/kakunin-ai/kakunin-mcp",

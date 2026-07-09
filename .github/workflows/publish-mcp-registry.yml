@@ -1,5 +1,5 @@
 # Publish this server to the official MCP Registry (registry.modelcontextprotocol.io)
-# from server.json, using GitHub OIDC to prove ownership of the io.github.nqzai
+# from server.json, using GitHub OIDC to prove ownership of the io.github.kakunin-ai
 # namespace — no secrets. The npm package @kakunin/mcp is published separately;
 # this only registers/updates the server listing.
 name: Publish to MCP Registry
