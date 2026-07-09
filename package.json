@@ -38,7 +38,7 @@
   "homepage": "https://kakunin.ai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nqzai/kakunin-mcp.git"
+    "url": "git+https://github.com/kakunin-ai/kakunin-mcp.git"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.0",
@@ -62,6 +62,6 @@
     "node": ">=18.0.0"
   },
   "bugs": {
-    "url": "https://github.com/nqzai/kakunin-mcp/issues"
+    "url": "https://github.com/kakunin-ai/kakunin-mcp/issues"
   }
 }

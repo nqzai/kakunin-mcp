@@ -3,7 +3,7 @@
   "name": "io.github.nqzai/kakunin",
   "description": "X.509 identity, risk scoring, and audit logging for AI agents. MiCA + EU AI Act compliant.",
   "repository": {
-    "url": "https://github.com/nqzai/kakunin-mcp",
+    "url": "https://github.com/kakunin-ai/kakunin-mcp",
     "source": "github"
   },
   "version": "0.2.3",
