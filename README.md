@@ -1,4 +1,4 @@
-# @kakunin/mcp
+# @kakunin/mcp — MCP server for AI agent identity & compliance
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/nqzai/kakunin-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/nqzai/kakunin-mcp)
 [![kakunin-mcp MCP server](https://glama.ai/mcp/servers/nqzai/kakunin-mcp/badges/score.svg)](https://glama.ai/mcp/servers/nqzai/kakunin-mcp)
