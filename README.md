@@ -1,10 +1,10 @@
 # @kakunin/mcp — MCP server for AI agent identity & compliance
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/kakunin-ai/kakunin-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/kakunin-ai/kakunin-mcp)
-[![kakunin-mcp MCP server](https://glama.ai/mcp/servers/kakunin-ai/kakunin-mcp/badges/score.svg)](https://glama.ai/mcp/servers/kakunin-ai/kakunin-mcp)
+[![kakunin-mcp MCP server](https://glama.ai/mcp/servers/nqzai/kakunin-mcp/badges/score.svg)](https://glama.ai/mcp/servers/nqzai/kakunin-mcp)
 
-<a href="https://glama.ai/mcp/servers/kakunin-ai/kakunin-mcp">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/kakunin-ai/kakunin-mcp/badges/card.svg" alt="kakunin-mcp MCP server" />
+<a href="https://glama.ai/mcp/servers/nqzai/kakunin-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/nqzai/kakunin-mcp/badges/card.svg" alt="kakunin-mcp MCP server" />
 </a>
 
 Model Context Protocol server for the [Kakunin](https://kakunin.ai) AI agent compliance API. Lets AI agents self-verify scope, check their own risk score, and log behavioral events — all from within Claude, Cursor, or any MCP-compatible runtime.
